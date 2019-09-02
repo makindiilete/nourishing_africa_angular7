@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+/*.heroBtn {
+  border-radius: 30px !important;
+}*/
+.largeText {
+  font-size: 5rem !important;
+}
+.mediumText {
+  font-size: 3rem !important;
+}
+.card-img {
+  width: 348px;
+  height: 218px;
+}
+.contactBtn:hover {
+  background-color: #9b1a07 !important;
+}
+
+.nav-item.active {
+  border-left: #fff 3px solid; }
+
+/*line height : - This controls the space between lines of text. It is often set as a unitless value e.g. 1.4 so that it is proportional to the font-size. It's a vital property for typographic control, if it is too low, lines are awkwardly squished together, too high and lines are awkwardly far apart*/
+/*Core styles*/
+
+
+body {
+  /*font-family: 'Lobster', cursive;*/
+  line-height: 1.4;
+}
+.font {
+  font-family: 'Abel', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+/*showcase*/
+#showcase {
+  background: #333 url("../src/assets/learning/images/slider_background.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+#showcase .showcase-content {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  /*overlay*/
+   position: absolute;
+  /*when we use the absolute 'position' to ensure our overlay covers the whole area, we need to specify the margins for the top, left, right, bottom by default we set their margins to 0 bcos we dont need any margin but here we need margins on the top bcos of the sticky navbar. So we need to remove the height of the sticky navbar from the top which is 59px */
+   top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}

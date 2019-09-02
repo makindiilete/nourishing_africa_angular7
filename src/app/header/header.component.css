@@ -1,0 +1,73 @@
+.logo {
+  height: 3rem;
+}
+
+nav {
+  background-color: #2c0a05 !important;
+}
+nav.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+nav ul li a:hover {
+  background: #9b1a07 !important;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+}
+
+/*navbar*/
+#navbar {
+  display: flex;
+  /*ds flex aligment 'space-between' will create maximum space between the two available elements (navbar brand & navbar links) and float them to the left and right */
+  justify-content: space-between;
+  /*z-index is used for elements order like "send to back & send to front" in illustrator: -this send the navbar to stay infront of all other elements unless we have another element with a z-index greater than 1*/
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+#navbar ul {
+  display: flex;
+  /*this will center the ul vertically in the background*/
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+/*showcase*/
+#showcase {
+  background: #333 url("../../assets/learning/images/slider_background.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+#showcase .showcase-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  /*overlay*/
+  /* position: absolute; */
+  /*when we use the absolute 'position' to ensure our overlay covers the whole area, we need to specify the margins for the top, left, right, bottom by default we set their margins to 0 bcos we dont need any margin but here we need margins on the top bcos of the sticky navbar. So we need to remove the height of the sticky navbar from the top which is 59px */
+  /* top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); */
+}
+
