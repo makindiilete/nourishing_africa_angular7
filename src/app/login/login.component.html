@@ -4,13 +4,24 @@
     <div class="col-sm-5">
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter username">
+        <input
+          type="text"
+          [(ngModel)]="user"
+          class="form-control"
+          id="username"
+          placeholder="Enter username"
+        />
         <!-- <small id="userHelp" class="form-text text-muted">Type your username.</small> -->
       </div>
     </div>
     <div class="col-sm-5">
       <label for="roomInput">Choose room</label>
-      <select name="roomInput" id="roomInput" class="form-control" [(ngModel)]="room">
+      <select
+        name="roomInput"
+        id="roomInput"
+        class="form-control"
+        [(ngModel)]="room"
+      >
         <option value="Agriculture">Agriculture</option>
         <option value="Technology">Technology</option>
         <option value="Business">Business</option>
@@ -20,8 +31,12 @@
     </div>
     <div class="col sm-2">
       <div style="margin-top:31px;" class="pull-right">
-        <button type="button" class="btn btn-dark mr-2" (click)="join()">Join</button>
-        <button type="button" class="btn btn-danger" (click)="leave()">Leave</button>
+        <button type="button" class="btn btn-dark mr-2" (click)="join()">
+          Join
+        </button>
+        <button type="button" class="btn btn-danger" (click)="leave()">
+          Leave
+        </button>
       </div>
     </div>
   </div>
@@ -29,17 +44,25 @@
   <div class="row">
     <div class="well" style="height: 250px; padding:15px;">
       <div *ngFor="let item of messageArray">
-        <span><strong>{{item.user}} : </strong> {{item.message}}</span>
+        <span
+          ><strong>{{ item.user }} : </strong> {{ item.message }}</span
+        >
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-10">
       <label>Type message to chat realtime</label>
-      <input type="text" class="form-control" [(ngModel)]="messageText">
+      <input type="text" class="form-control" [(ngModel)]="messageText" />
     </div>
-    <div class="col-sm-2"  style="margin-top:31px;">
-      <button type="submit" class="btn btn-dark pull-right" (click)="sendMessage()">Send</button>
+    <div class="col-sm-2" style="margin-top:31px;">
+      <button
+        type="submit"
+        class="btn btn-dark pull-right"
+        (click)="sendMessage()"
+      >
+        Send
+      </button>
     </div>
   </div>
 </div>
